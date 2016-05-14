@@ -96,10 +96,10 @@ describe('slack-bott:app', function () {
       assert.fileContent('src/botMazinga.js', 'Hello I am bot-mazinga');
     });
 
-    it('fills the readme.md with bot and author data', function () {
-      assert.fileContent('readme.md', '## About bot-mazinga');
-      assert.fileContent('readme.md', '(https://github.com/mazingaAccount/bot-mazinga/releases)');
-      assert.fileContent('readme.md', 'Go Nagai  (Creator) | [mazingaAccount](https://github.com/mazingaAccount) |');
+    it('fills the README.md with bot and author data', function () {
+      assert.fileContent('README.md', '## About bot-mazinga');
+      assert.fileContent('README.md', '(https://github.com/mazingaAccount/bot-mazinga/releases)');
+      assert.fileContent('README.md', 'Go Nagai  (Creator) | [mazingaAccount](https://github.com/mazingaAccount) |');
     });
 
   });
