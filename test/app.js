@@ -61,8 +61,7 @@ describe('slack-bott:app', function () {
         'grunt/mochaTest.js',
         'src/main.js',
         'src/botMazinga.js',
-        'test/botMazinga.spec.js',
-        'test/mockoBjects/channel.js'
+        'test/botMazinga.spec.js'
       ];
 
       assert.file(expected);

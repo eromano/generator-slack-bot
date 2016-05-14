@@ -65,13 +65,6 @@ In order to make the bot works you need a TOKEN_SLACK.
 Your Slack bot integration token is obtainable at https://my.slack.com/services/new/bot.
 After you have obtained your TOKEN_SLACK copy it in the configBot.json
 
-## Getting To Know Yeoman
-
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
-
 ## History
 
 For detailed changelog, see [Releases](https://github.com/Alfresco/generator-slack-bot/releases).

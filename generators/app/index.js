@@ -259,11 +259,6 @@ module.exports = yeoman.Base.extend({
       }
     );
 
-    this.fs.copyTpl(
-      this.templatePath('_test/mockObjects/_channel.js'),
-      this.destinationPath('test/mockObjects/channel.js')
-    );
-
     this.composeWith('license', {
       options: {
         name: this.props.authorName,
