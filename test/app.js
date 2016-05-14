@@ -36,6 +36,7 @@ describe('slack-bott:app', function () {
           keywords: ['mazinga-keyword', 'bot-keyword', 'great-robot'],
           license: 'MIT'
         })
+        .withOptions({'skip-install': true})
         .on('end', done);
     });
 

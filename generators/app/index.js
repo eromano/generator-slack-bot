@@ -271,7 +271,9 @@ module.exports = yeoman.Base.extend({
   },
 
   install: function () {
-    this.npmInstall();
+    if (!this.options['skip-install']) {
+      this.npmInstall();
+    }
   }
 });
 
