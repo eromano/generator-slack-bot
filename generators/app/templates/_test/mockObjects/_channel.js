@@ -45,7 +45,6 @@ class channel {
             this.createChannel()
         ];
     }
-
 }
 
 module.exports = channel;
