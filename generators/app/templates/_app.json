@@ -1,0 +1,10 @@
+{
+  "name": "<%= botName %>",
+  "description": "<%= description %>",
+  "repository": "https://github.com/<%= githubAccount %>/<%= botName %>.git",
+  "env": {
+    "TOKEN_SLACK": {
+      "description": "Your Slack bot integration token (obtainable at https://my.slack.com/services/new/bot)"
+    }
+  }
+}
