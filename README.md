@@ -1,6 +1,6 @@
 <h1 align="center">Slack bot Yeoman Generator</h1>
 <p align="center">
-  <img title="yeoman generator" src='https://github.com/yeoman/media/blob/master/optimized/yeoman-150x150-opaque.png' alt='yeoman logo' width="100px" height="100px" />
+  <img title="yeoman generator" src='/assets/yeoman-logo.png' alt='yeoman logo' width="100px" height="100px" />
   <img title="slack logo" src='/assets/slack-logo.png' alt='slack logo' width="100px" height="100px" />
 </p>
 <p align="center">
