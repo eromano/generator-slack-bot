@@ -21,6 +21,9 @@
   </a>
 </p>
 
+## About Slack bot Yeoman Generator
+>Full Yeoman Generator to create Slack Bot with travis, coveralls and test.
+
 ## Installation
 
 First, install [Yeoman](http://yeoman.io) and generator-slack-bot using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
@@ -36,7 +39,7 @@ Then generate your new Bot:
 yo slack-bot
 ```
 
-Which will generate the following project structure:
+Which will generate the following project structure, if for example your bot name is Mazinga:
 
     ├── '.travis.yml',
     ├── '.gitignore',
