@@ -27,8 +27,7 @@ module.exports = yeoman.Base.extend({
     var done = this.async();
 
     this.log(yosay(
-      'Welcome to the awesome slack bot generator!'
-    ));
+      'Welcome to the awesome slack bot generator.\n Please think about to add a star to this generator on github https://github.com/eromano/generator-slack-bot!'));
 
     askName({
       name: 'botName',
