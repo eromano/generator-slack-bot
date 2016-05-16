@@ -35,7 +35,7 @@ class <%= botNameCamelCase %> {
       var titleLink = 'Hello I am <%= botName %>';
 
       this.postSlackMessage(message, fallBack, color, null, title, titleLink,'general');
-    })).bind(this);
+    }).bind(this));
   }
 
   /**
