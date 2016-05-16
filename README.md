@@ -19,6 +19,9 @@
   <a href="https://nodei.co/npm/generator-slack-bot/">
     <img src="http://img.shields.io/npm/v/generator-slack-bot.svg" alt='npm version' >
   </a>
+  <a title='blog' href='http://eromano.github.io'>
+     <img src='https://img.shields.io/badge/style-blog-blue.svg?label=my' alt='blog' />
+  </a>
 </p>
 
 ## About Slack bot Yeoman Generator
@@ -70,7 +73,7 @@ After you have obtained your TOKEN_SLACK copy it in the configBot.json
 
 ## History
 
-For detailed changelog, see [Releases](https://github.com/Alfresco/generator-slack-bot/releases).
+For detailed changelog, see [Releases](https://github.com/eromano/generator-slack-bot/releases).
 
 ## Contributors
 

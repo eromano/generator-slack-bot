@@ -1,6 +1,6 @@
 {
   "name": "generator-slack-bot",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Yeoman generator to create a Node Slack Bot",
   "homepage": "https://github.com/eromano/generator-slack-bot",
   "author": {

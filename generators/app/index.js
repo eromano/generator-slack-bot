@@ -201,7 +201,6 @@ module.exports = yeoman.Base.extend({
     );
 
     currentPkg = this.fs.readJSON(this.destinationPath('package.json'), {});
-    this.props.keywords.push("alfresco-component");
 
     pkg = _.extend({
       keywords: this.props.keywords
