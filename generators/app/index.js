@@ -62,24 +62,27 @@ module.exports = yeoman.Base.extend({
       message: 'How would you describe the bot?'
     }, {
       name: 'authorName',
-      message: 'Author\'s Name',
+      message: 'Author\'s Name :',
       default: this.user.git.name(),
       store: true
     }, {
       name: 'authorEmail',
-      message: 'Author\'s Email',
+      message: 'Author\'s Email :',
       default: this.user.git.email(),
       store: true
     }, {
       name: 'authorUrl',
-      message: 'Author\'s Homepage',
+      message: 'Author\'s Homepage :',
       store: true
     }, {
       name: 'keywords',
-      message: 'Package keywords (comma to split)',
+      message: 'Package keywords (comma to split) :',
       filter: function (words) {
         return words.split(/\s*,\s*/g);
       }
+    }, {
+      name: 'slackBotKey',
+      message: 'Slack bot Key, Your Slack bot integration token is obtainable at https://my.slack.com/services/new/bot, if you don\'t have it you can add later in configBot.json :'
     }];
 
     this.prompt(prompts, function (props) {
@@ -99,7 +102,7 @@ module.exports = yeoman.Base.extend({
 
         var prompts = [{
           name: 'githubAccount',
-          message: 'GitHub username or organization',
+          message: 'GitHub username or organization :',
           default: username
         }];
 
@@ -184,9 +187,12 @@ module.exports = yeoman.Base.extend({
       this.destinationPath('grunt/mochaTest.js')
     );
 
-    this.fs.copy(
+    this.fs.copyTpl(
       this.templatePath('_configBot.json'),
-      this.destinationPath('configBot.json')
+      this.destinationPath('configBot.json'),
+      {
+        slackBotKey: this.props.slackBotKey
+      }
     );
 
     this.fs.copyTpl(
@@ -245,6 +251,11 @@ module.exports = yeoman.Base.extend({
         botName: this.props.botName,
         botNameCamelCase: this.props.botNameCamelCase
       }
+    );
+
+    this.fs.copy(
+      this.templatePath('_slackMessageAnalyzer.js'),
+      this.destinationPath('src/slackMessageAnalyzer.js')
     );
 
     this.fs.copyTpl(

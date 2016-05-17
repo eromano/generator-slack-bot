@@ -20,7 +20,14 @@
 ><%= botName %> is a  node.js slack bot.
 <%= description %>
 
-## Getting Started
+## Bot Command list
+
+* Just to start type hello in the general chat after invited the bot in it
+   
+    ``` hello  ```
+
+
+## Install Getting Started
 1. Create a new [bot integration](https://my.slack.com/services/new/bot)
 1. Choose between **One-Click Heroku** or **Manual Heroku**
 

@@ -30,6 +30,7 @@ describe('slack-bott:app', function () {
           botName: 'bot-mazinga',
           description: 'Mazinger Z is a Japanese super robot manga series written and illustrated by Go Nagai',
           githubAccount: 'mazingaAccount',
+          slackBotKey: 'fake-token',
           authorName: 'Go Nagai',
           authorEmail: 'Go.Nagai@mazinga.com',
           authorUrl: 'http://mazinga.io',
@@ -60,6 +61,7 @@ describe('slack-bott:app', function () {
         'grunt/jshint.js',
         'grunt/mocha_istanbul.js',
         'grunt/mochaTest.js',
+        'src/slackMessageAnalyzer.js',
         'src/main.js',
         'src/botMazinga.js',
         'test/botMazinga.spec.js'
@@ -102,5 +104,8 @@ describe('slack-bott:app', function () {
       assert.fileContent('README.md', 'Go Nagai  (Creator) | [mazingaAccount](https://github.com/mazingaAccount) |');
     });
 
+    it('fills the configBot.json with the token', function () {
+      assert.fileContent('configBot.json', 'fake-token');
+    });
   });
 });

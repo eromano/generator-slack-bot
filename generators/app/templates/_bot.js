@@ -2,6 +2,7 @@
 
 var Bot = require('slackbots');
 var assert = require('assert');
+var slackMessageAnalyzer = require('./slackMessageAnalyzer');
 
 class <%= botNameCamelCase %> {
 
@@ -47,7 +48,7 @@ class <%= botNameCamelCase %> {
       var message = 'Hello answer';
       var fallBack = 'Hello answer';
       var color = 'warning';
-      var title = 'Hello Answer';
+      var title = 'Hello Answer ' + slackMessageAnalyzer.createSlackMessageLink('made by slack bot generator','https://github.com/eromano/generator-slack-bot');
 
       this.postSlackMessage(message, fallBack, color, null, title, '', 'general');
     }).bind(this));
@@ -97,8 +98,13 @@ class <%= botNameCamelCase %> {
     }).bind(this));
   }
 
+  /**
+   * recognize if in the message is present the command "hello"
+   *
+   * @param {String} textMessage to analyze
+   */
   isHelloMessage(textMessage) {
-    return textMessage && textMessage.toLowerCase().indexOf('hello') > -1;
+    return slackMessageAnalyzer.isTextContainedInMessage(textMessage, 'hello');
   }
 }
 
