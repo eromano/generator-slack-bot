@@ -84,7 +84,7 @@ In this class you are going to find all the utility in order to analyzer the sla
 
 Class | Method | Parameters | Description
 ------------ | ------------- | ------------- | -------------
-slackMessageAnalyzer.js |  createSlackMessageLink(titleLink, link) |@param {Boolean}  @param {String} titleLink  text to show instead of the pure URL <br /> @param {String} link to redirect |  Create a slack link format message
+slackMessageAnalyzer.js |  createSlackMessageLink(titleLink, link) |@param {String} titleLink  text to show instead of the pure URL <br /> @param {String} link to redirect |  Create a slack link format message
 slackMessageAnalyzer.js |  createSlackMessageLink(titleLink, link) |@param {String} textMessage message to analyze <br /> @param {String} textToSearch text to search in the message |  Create a slack link format message isTextContainedInMessage
 
 ###  yourBotName.js
