@@ -21,6 +21,7 @@ class <%= botNameCamelCase %> {
 
   run() {
     this._startChannelMessageListner();
+    this._listenerHelloMessage();
   }
 
   /**
@@ -34,7 +35,21 @@ class <%= botNameCamelCase %> {
       var title = '<%= botName %> greetings';
       var titleLink = 'Hello I am <%= botName %>';
 
-      this.postSlackMessage(message, fallBack, color, null, title, titleLink,'general');
+      this.postSlackMessage(message, fallBack, color, null, title, titleLink, 'general');
+    }).bind(this));
+  }
+
+  /**
+   * Post a message on slack chat in answer to hello
+   */
+  _listenerHelloMessage() {
+    this._listenerMessage(this.isHelloMessage, (function(message) {
+      var message = 'Hello answer';
+      var fallBack = 'Hello answer';
+      var color = 'warning';
+      var title = 'Hello Answer';
+
+      this.postSlackMessage(message, fallBack, color, null, title, '', 'general');
     }).bind(this));
   }
 
@@ -66,6 +81,24 @@ class <%= botNameCamelCase %> {
     };
 
     this.bot.postTo(nameChannelOrUser, '', params);
+  }
+
+  /**
+   * Call a callback in the case a message from slack meets the condition
+   *
+   * @param {Boolean}  condition to meet to call the callback
+   * @param {Function} callback to call if the condition is satisfied
+   */
+  _listenerMessage(condition, callback) {
+    this.bot.on('message', (function(message) {
+      if (condition.call(this, message.text)) {
+        callback.call(this, message);
+      }
+    }).bind(this));
+  }
+
+  isHelloMessage(textMessage) {
+    return textMessage && textMessage.toLowerCase().indexOf('hello') > -1;
   }
 }
 
