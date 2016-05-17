@@ -42,6 +42,9 @@ Then generate your new Bot:
 yo slack-bot
 ```
 
+<img src='assets/generator.gif' alt='generator slack bot shell' />
+
+
 Which will generate the following project structure, if for example your bot name is Mazinga:
 
     ├── travis.yml
