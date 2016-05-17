@@ -76,7 +76,7 @@ Your Slack bot integration token is obtainable at https://my.slack.com/services/
 After you have obtained your TOKEN_SLACK copy it in the configBot.json
 
 
-## Main chunk of codes to understand in the generated bot
+## Main chunks of codes to understand in the generated bot
 
 ###  slackMessageAnalyzer.js
 
