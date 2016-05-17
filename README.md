@@ -72,25 +72,30 @@ In order to make the bot works you need a TOKEN_SLACK.
 Your Slack bot integration token is obtainable at https://my.slack.com/services/new/bot.
 After you have obtained your TOKEN_SLACK copy it in the configBot.json
 
+
 ## Main chunk of codes to understand in the generated bot
 
-1. slackMessageAnalyzer.js
-> In this class you are going to find all the utility in order to analyzer the slack message
+###  slackMessageAnalyzer.js
+
+In this class you are going to find all the utility in order to analyzer the slack message
 
 Class | Method | Parameters | Description
 ------------ | ------------- | ------------- | -------------
 slackMessageAnalyzer.js |  createSlackMessageLink(titleLink, link) |@param {Boolean}  @param {String} titleLink  text to show instead of the pure URL <br /> @param {String} link to redirect |  Create a slack link format message
 slackMessageAnalyzer.js |  createSlackMessageLink(titleLink, link) |@param {String} textMessage message to analyze <br /> @param {String} textToSearch text to search in the message |  Create a slack link format message isTextContainedInMessage
 
-2. yourBotName.js
-> In this class there are the listeners for the messages
+###  yourBotName.js
+
+In this class there are the listeners for the messages
 
 Class | Method | Parameters | Description
 ------------ | ------------- | ------------- | -------------
 yourBotName.js |  _listenerMessage(condition, callback) |@param {Boolean}  condition to meet to call the callback  <br /> @param {Function} callback to call if the condition is satisfied | Call a callback in the case a message from slack meets the condition
 
 ## Code Example
-> This pice of code below will activate a listner on the hello message and will answer in the general chat wit a mssage 'Hello Answer'
+
+This pice of code below will activate a listner on the hello message and will answer in the general chat wit a mssage 'Hello Answer'
+
 
 ```javascript
    _listenerHelloMessage() {
